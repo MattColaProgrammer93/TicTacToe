@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="tileNumOne">Test</string>
+    <string name="tileNumTwo">Test</string>
+    <string name="tileNumThree">Test</string>
+    <string name="tileNumFour">Test</string>
+    <string name="tileNumFive">Test</string>
+    <string name="tileNumSix">Test</string>
+    <string name="tileNumSeven">Test</string>
+    <string name="tileNumEight">Test</string>
+    <string name="tileNumNine">Test</string>
+    <string name="currentPlayerName">Player</string>
+    <string name="newGameText">New Game</string>
+</resources>

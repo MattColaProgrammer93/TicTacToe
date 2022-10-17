@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--The tiles of the game-->
+    <Button
+        android:id="@+id/tileOne"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumOne"
+        app:layout_constraintEnd_toStartOf="@+id/tileTwo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/tileTwo"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumTwo"
+        app:layout_constraintEnd_toStartOf="@+id/tileThree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tileOne"
+        app:layout_constraintTop_toTopOf="@+id/tileOne" />
+
+    <Button
+        android:id="@+id/tileThree"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tileTwo"
+        app:layout_constraintTop_toTopOf="@+id/tileTwo"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tileFour"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumFour"
+        app:layout_constraintEnd_toStartOf="@+id/tileFive"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tileOne"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tileFive"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumFive"
+        app:layout_constraintEnd_toStartOf="@+id/tileSix"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tileFour"
+        app:layout_constraintTop_toTopOf="@+id/tileFour" />
+
+    <Button
+        android:id="@+id/tileSix"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumSix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tileFive"
+        app:layout_constraintTop_toTopOf="@+id/tileFive"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tileSeven"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumSeven"
+        app:layout_constraintEnd_toStartOf="@+id/tileEight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tileFour"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tileEight"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumEight"
+        app:layout_constraintEnd_toStartOf="@+id/tileNine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tileSeven"
+        app:layout_constraintTop_toTopOf="@+id/tileSeven" />
+
+    <Button
+        android:id="@+id/tileNine"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/tileNumNine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tileEight"
+        app:layout_constraintTop_toTopOf="@+id/tileEight"
+        tools:ignore="TextContrastCheck" />
+
+    <!--The Current Player TextView-->
+
+    <TextView
+        android:id="@+id/currentPlayer"
+        android:layout_width="58dp"
+        android:layout_height="27dp"
+        android:text="@string/currentPlayerName"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tileEight"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <!--New Game-->
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="368dp"
+        android:layout_height="53dp"
+        android:text="@string/newGameText"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentPlayer"
+        app:layout_constraintVertical_bias="0.062" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
