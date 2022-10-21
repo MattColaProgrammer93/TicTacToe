@@ -14,11 +14,13 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumOne"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tileTwo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileTwo"
@@ -26,10 +28,13 @@
         android:layout_height="107dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumTwo"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tileThree"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileOne"
-        app:layout_constraintTop_toTopOf="@+id/tileOne" />
+        app:layout_constraintTop_toTopOf="@+id/tileOne"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileThree"
@@ -37,11 +42,13 @@
         android:layout_height="107dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumThree"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileTwo"
         app:layout_constraintTop_toTopOf="@+id/tileTwo"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileFour"
@@ -50,11 +57,13 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumFour"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tileFive"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tileOne"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileFive"
@@ -62,10 +71,13 @@
         android:layout_height="107dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumFive"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tileSix"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileFour"
-        app:layout_constraintTop_toTopOf="@+id/tileFour" />
+        app:layout_constraintTop_toTopOf="@+id/tileFour"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileSix"
@@ -73,11 +85,13 @@
         android:layout_height="107dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumSix"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileFive"
         app:layout_constraintTop_toTopOf="@+id/tileFive"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileSeven"
@@ -86,11 +100,13 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumSeven"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tileEight"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tileFour"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileEight"
@@ -98,10 +114,13 @@
         android:layout_height="107dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumEight"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tileNine"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileSeven"
-        app:layout_constraintTop_toTopOf="@+id/tileSeven" />
+        app:layout_constraintTop_toTopOf="@+id/tileSeven"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileNine"
@@ -109,19 +128,22 @@
         android:layout_height="107dp"
         android:background="@drawable/btn_bg"
         android:text="@string/tileNumNine"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileEight"
         app:layout_constraintTop_toTopOf="@+id/tileEight"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <!--The Current Player TextView-->
 
     <TextView
         android:id="@+id/currentPlayer"
-        android:layout_width="58dp"
-        android:layout_height="27dp"
+        android:layout_width="227dp"
+        android:layout_height="32dp"
         android:text="@string/currentPlayerName"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
