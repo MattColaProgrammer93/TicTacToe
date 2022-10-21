@@ -9,11 +9,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // The beginning player turn
-        var playerName = "Player X"
-
-        // The winner is not met
-        var winner = false
 
         // All tiles
         val firstTile = findViewById<Button>(R.id.tileOne)
@@ -27,56 +22,94 @@ class MainActivity : AppCompatActivity() {
         val ninthTile = findViewById<Button>(R.id.tileNine)
 
         // The player turn text
-        val turn = findViewById<TextView>(R.id.currentPlayer)
+        val playerTurn = findViewById<TextView>(R.id.currentPlayer)
 
+        // New game
+        val newGame = findViewById<Button>(R.id.newGame)
+
+        // The tiles from 1-9
         firstTile.setOnClickListener {
-            tileClicked(firstTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (firstTile.getText() == "") {
+                tileClicked(firstTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         secondTile.setOnClickListener {
-            tileClicked(secondTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (secondTile.getText() == "") {
+                tileClicked(secondTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         thirdTile.setOnClickListener {
-            tileClicked(thirdTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (thirdTile.getText() == "") {
+                tileClicked(thirdTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         fourthTile.setOnClickListener {
-            tileClicked(fourthTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (fourthTile.getText() == "") {
+                tileClicked(fourthTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         fifthTile.setOnClickListener {
-            tileClicked(fifthTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (fifthTile.getText() == "") {
+                tileClicked(fifthTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         sixthTile.setOnClickListener {
-            tileClicked(sixthTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (sixthTile.getText() == "") {
+                tileClicked(sixthTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         seventhTile.setOnClickListener {
-            tileClicked(seventhTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (seventhTile.getText() == "") {
+                tileClicked(seventhTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         eighthTile.setOnClickListener {
-            tileClicked(eighthTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (eighthTile.getText() == "") {
+                tileClicked(eighthTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
         }
 
         ninthTile.setOnClickListener {
-            tileClicked(ninthTile, playerName)
-            playerName = changePlayerTurn(playerName)
+            if (ninthTile.getText() == "") {
+                tileClicked(ninthTile, playerTurn)
+                playerTurn.setText(changePlayerTurn(playerTurn))
+            }
+        }
+
+        // The new game button
+        newGame.setOnClickListener {
+            firstTile.setText("")
+            secondTile.setText("")
+            thirdTile.setText("")
+            fourthTile.setText("")
+            fifthTile.setText("")
+            sixthTile.setText("")
+            seventhTile.setText("")
+            eighthTile.setText("")
+            ninthTile.setText("")
+            playerTurn.setText("Player X\'s turn")
         }
     }
 
-    fun tileClicked(button:Button, name: String) {
-        if (name == "Player X"){
+    // The function will take a button and textview as parameters. This function
+    // will change tile text to the current player's symbol during their turn
+    fun tileClicked(button:Button, name: TextView) {
+        if (name.getText() == "Player X\'s turn"){
             button.setText("X")
         }
         else {
@@ -84,14 +117,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun changePlayerTurn(player:String): String{
-        if (player == "Player X"){
-            return "Player O"
+    // The function will swap player's turn
+    fun changePlayerTurn(player:TextView):String{
+        if (player.getText() == "Player X\'s turn"){
+            return "Player O\'s turn"
         }
         else {
-            return "Player X"
+            return "Player X\'s turn"
         }
     }
-
 
 }
