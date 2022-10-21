@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileTwo"
@@ -29,7 +29,8 @@
         app:layout_constraintEnd_toStartOf="@+id/tileThree"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileOne"
-        app:layout_constraintTop_toTopOf="@+id/tileOne" />
+        app:layout_constraintTop_toTopOf="@+id/tileOne"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileThree"
@@ -41,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileTwo"
         app:layout_constraintTop_toTopOf="@+id/tileTwo"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileFour"
@@ -54,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tileOne"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileFive"
@@ -65,7 +66,8 @@
         app:layout_constraintEnd_toStartOf="@+id/tileSix"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileFour"
-        app:layout_constraintTop_toTopOf="@+id/tileFour" />
+        app:layout_constraintTop_toTopOf="@+id/tileFour"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileSix"
@@ -77,7 +79,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileFive"
         app:layout_constraintTop_toTopOf="@+id/tileFive"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileSeven"
@@ -90,7 +92,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tileFour"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileEight"
@@ -101,7 +103,8 @@
         app:layout_constraintEnd_toStartOf="@+id/tileNine"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileSeven"
-        app:layout_constraintTop_toTopOf="@+id/tileSeven" />
+        app:layout_constraintTop_toTopOf="@+id/tileSeven"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tileNine"
@@ -113,15 +116,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tileEight"
         app:layout_constraintTop_toTopOf="@+id/tileEight"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <!--The Current Player TextView-->
 
     <TextView
         android:id="@+id/currentPlayer"
-        android:layout_width="58dp"
-        android:layout_height="27dp"
+        android:layout_width="227dp"
+        android:layout_height="32dp"
         android:text="@string/currentPlayerName"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
