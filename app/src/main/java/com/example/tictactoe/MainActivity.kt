@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         // Winner?
         var winnerCheck = false
 
+        // Tie?
+        var tieCheck = false
+
         // The tiles from 1-9
         firstTile.setOnClickListener {
             if (firstTile.getText() == "" && !winnerCheck) {
@@ -199,31 +202,46 @@ class MainActivity : AppCompatActivity() {
     // if a row has been matched
     fun checkingForWinner(tile1: Button, tile2: Button, tile3: Button, tile4: Button, tile5: Button,
                           tile6: Button, tile7: Button, tile8: Button, tile9: Button):Boolean {
-        // Checking horizontal rows with symbols Xs or Os
-        if (((tile1.getText() == "X" || tile1.getText() == "O") && (tile2.getText() == "X" || tile2.getText() == "O") &&
-                    (tile3.getText() == "X" || tile3.getText() == "O")) || ((tile4.getText() == "X" || tile4.getText() == "O") &&
-                    (tile5.getText() == "X" || tile5.getText() == "O") && (tile6.getText() == "X" || tile6.getText() == "O")) ||
-            ((tile7.getText() == "X" || tile7.getText() == "O") && (tile8.getText() == "X" || tile8.getText() == "O")
-                    && (tile9.getText() == "X" || tile9.getText() == "O"))
-        ) {
+        // Checking horizontal rows with symbols Xs
+        if (((tile1.getText() == "X") && (tile2.getText() == "X") && (tile3.getText() == "X")) ||
+            ((tile4.getText() == "X") && (tile5.getText() == "X") && (tile6.getText() == "X")) ||
+            ((tile7.getText() == "X") && (tile8.getText() == "X") && (tile9.getText() == "X"))){
             return true
         }
-        // Checking vertical rows with symbols Xs or Os
-        else if (((tile1.getText() == "X" || tile1.getText() == "O") && (tile4.getText() == "X" || tile4.getText() == "O") &&
-                    (tile7.getText() == "X" || tile7.getText() == "O")) || ((tile2.getText() == "X" || tile2.getText() == "O") &&
-                    (tile5.getText() == "X" || tile5.getText() == "O") && (tile8.getText() == "X" || tile8.getText() == "O")) ||
-            ((tile3.getText() == "X" || tile3.getText() == "O") && (tile6.getText() == "X" || tile6.getText() == "O")
-                    && (tile9.getText() == "X" || tile9.getText() == "O"))
-        ) {
+
+        // Checking horizontal rows with symbols Os
+        else if (((tile1.getText() == "O") && (tile2.getText() == "O") && (tile3.getText() == "O")) ||
+            ((tile4.getText() == "O") && (tile5.getText() == "O") && (tile6.getText() == "O")) ||
+            ((tile7.getText() == "O") && (tile8.getText() == "O") && (tile9.getText() == "O"))){
             return true
         }
-        // Checking crossing rows with symbols Xs or 0s
-        else if (((tile1.getText() == "X" || tile1.getText() == "O") && (tile5.getText() == "X" || tile5.getText() == "O") &&
-                    (tile9.getText() == "X" || tile9.getText() == "O")) || ((tile7.getText() == "X" || tile7.getText() == "O") &&
-                    (tile5.getText() == "X" || tile5.getText() == "O") && (tile3.getText() == "X" || tile3.getText() == "O"))
-        ) {
+
+        // Checking vertical rows with symbols Xs
+        else if (((tile1.getText() == "X") && (tile4.getText() == "X") && (tile7.getText() == "X")) ||
+            ((tile2.getText() == "X") && (tile5.getText() == "X") && (tile8.getText() == "X")) ||
+            ((tile3.getText() == "X") && (tile6.getText() == "X") && (tile9.getText() == "X"))){
             return true
         }
+
+        // Checking vertical rows with symbols Os
+        else if (((tile1.getText() == "O") && (tile4.getText() == "O") && (tile7.getText() == "O")) ||
+            ((tile2.getText() == "O") && (tile5.getText() == "O") && (tile8.getText() == "O")) ||
+            ((tile3.getText() == "O") && (tile6.getText() == "O") && (tile9.getText() == "O"))){
+            return true
+        }
+
+        // Checking crossing rows Xs
+        else if (((tile1.getText() == "X") && (tile5.getText() == "X") && (tile9.getText() == "X")) ||
+            ((tile7.getText() == "X") && (tile5.getText() == "X") && (tile3.getText() == "X"))){
+            return true
+        }
+
+        // Checking crossing rows 0s
+        else if (((tile1.getText() == "O") && (tile5.getText() == "O") && (tile9.getText() == "O")) ||
+            ((tile7.getText() == "O") && (tile5.getText() == "O") && (tile3.getText() == "O"))){
+            return true
+        }
+
         // Return false if none of the conditions are met
         return false
     }
