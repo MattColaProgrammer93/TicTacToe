@@ -35,133 +35,187 @@ class MainActivity : AppCompatActivity() {
 
         // The tiles from 1-9
         firstTile.setOnClickListener {
-            if (firstTile.getText() == "" && !winnerCheck) {
+            if (firstTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(firstTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         secondTile.setOnClickListener {
-            if (secondTile.getText() == "" && !winnerCheck) {
+            if (secondTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(secondTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         thirdTile.setOnClickListener {
-            if (thirdTile.getText() == "" && !winnerCheck) {
+            if (thirdTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(thirdTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         fourthTile.setOnClickListener {
-            if (fourthTile.getText() == "" && !winnerCheck) {
+            if (fourthTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(fourthTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         fifthTile.setOnClickListener {
-            if (fifthTile.getText() == "" && !winnerCheck) {
+            if (fifthTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(fifthTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         sixthTile.setOnClickListener {
-            if (sixthTile.getText() == "" && !winnerCheck) {
+            if (sixthTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(sixthTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         seventhTile.setOnClickListener {
-            if (seventhTile.getText() == "" && !winnerCheck) {
+            if (seventhTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(seventhTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         eighthTile.setOnClickListener {
-            if (eighthTile.getText() == "" && !winnerCheck) {
+            if (eighthTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(eighthTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         ninthTile.setOnClickListener {
-            if (ninthTile.getText() == "" && !winnerCheck) {
+            if (ninthTile.getText() == "" && !winnerCheck && !tieCheck) {
                 tileClicked(ninthTile, playerTurn)
                 winnerCheck = checkingForWinner(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
                     sixthTile, seventhTile, eighthTile, ninthTile)
                 if (winnerCheck){
                     playerTurn.setText(winnerMet(playerTurn))
                 }
-                else if (!winnerCheck){
-                    playerTurn.setText(changePlayerTurn(playerTurn))
+                else {
+                    tieCheck = checkingForTie(firstTile, secondTile, thirdTile, fourthTile, fifthTile,
+                        sixthTile, seventhTile, eighthTile, ninthTile)
+                    if (!tieCheck)
+                        playerTurn.setText(changePlayerTurn(playerTurn))
+                    else {
+                        playerTurn.setText(tieMet(playerTurn))
+                    }
                 }
             }
         }
 
         // The new game button will change all tiles to blank, player x will have the first turn,
-        // and set winnerCheck to false
+        // and set both tieCheck and winnerCheck to false
         newGame.setOnClickListener {
             firstTile.setText("")
             secondTile.setText("")
@@ -174,6 +228,7 @@ class MainActivity : AppCompatActivity() {
             ninthTile.setText("")
             playerTurn.setText("Player X\'s turn")
             winnerCheck = false
+            tieCheck = false
         }
     }
 
@@ -255,4 +310,18 @@ class MainActivity : AppCompatActivity() {
             return "O wins"
         }
     }
+
+    fun checkingForTie(tile1: Button, tile2: Button, tile3: Button, tile4: Button, tile5: Button,
+                       tile6: Button, tile7: Button, tile8: Button, tile9: Button):Boolean{
+        // If all tiles are not null
+        if ((tile1.getText() != "") && (tile2.getText() != "") && (tile3.getText() != "") && (tile4.getText() != "") &&
+            (tile5.getText() != "") && (tile6.getText() != "") && (tile7.getText() != "") && (tile8.getText() != "") &&
+            (tile9.getText() != "")){
+            return true
+        }
+        return false
+    }
+
+    fun tieMet(player: TextView):String {return "Tie!"}
+
 }
